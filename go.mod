@@ -1,4 +1,4 @@
-module github.com/tejzpr/cisco-webex-teams
+module github.com/tejzpr/go-cisco-webex-teams
 go 1.14
 
 require (
