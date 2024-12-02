@@ -10,7 +10,7 @@ import webexteams "github.com/jbogarin/go-cisco-webex-teams/sdk"
 
 ## Documentation
 
-Documentation for the library can be found [here](https://godoc.org/github.com/jbogarin/go-cisco-webex-teams/sdk)
+Documentation for the library can be found [here](https://godoc.org/github.com/tejzpr/go-cisco-webex-teams/sdk)
 
 ## Changes
 
