@@ -265,6 +265,7 @@ func (s *MessagesService) GetMessage(messageID string) (*Message, *resty.Respons
 // ListMessagesQueryParams are the query params for the ListMessages API Call
 type ListMessagesQueryParams struct {
 	RoomID          string    `url:"roomId,omitempty"`          // List messages for a room, by ID.
+	ParentID        string    `url:"parentId,omitempty"`        // List messages by parent message ID in a room.
 	MentionedPeople string    `url:"mentionedPeople,omitempty"` // List messages where the caller is mentioned by specifying *me* or the caller personId.
 	Before          time.Time `url:"before,omitempty"`          // List messages sent before a date and time, in ISO8601 format. Format: yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSSZ
 	BeforeMessage   string    `url:"beforeMessage,omitempty"`   // List messages sent before a message, by ID.
@@ -288,6 +289,10 @@ Long result sets will be split into pages.
 func (s *MessagesService) ListMessages(queryParams *ListMessagesQueryParams) (*Messages, *resty.Response, error) {
 
 	path := "/messages/"
+
+	if queryParams.RoomID == "" {
+		return nil, nil, errors.New("RoomID is required")
+	}
 
 	queryParamsString, _ := query.Values(queryParams)
 

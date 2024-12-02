@@ -5,7 +5,7 @@ go-cisco-webex-teams is a Go client library for the [Cisco Webex Teams API](http
 ## Usage
 
 ```go
-import webexteams "github.com/jbogarin/go-cisco-webex-teams/sdk"
+import webexteams "github.com/tejzpr/go-cisco-webex-teams/sdk"
 ```
 
 ## Documentation
@@ -19,6 +19,7 @@ Documentation for the library can be found [here](https://godoc.org/github.com/t
 - 2020-10-14: **Tag v0.4.0**: _Breaking change_, added Go modules functionality
 - 2021-02-23: **Tag v0.4.1**: Included events and admin audit events functionality
 - 2022-08-01: **Tag v0.4.3**: Included attachment actions and membership changes
+- 2024-12-02: **Tag v0.4.4**: Update message list query params
 
 ## Authorization Token
 
